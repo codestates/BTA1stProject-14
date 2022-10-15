@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Aptos Wallet</title>
+    <style>
+      body {
+        text-align: center;
+        margin: 10px;
+      }
+
+      #aptosLogo {
+        width: 300px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      button {
+        margin: 20px;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+      <img src='/img/aptos_logo.png' id='aptosLogo'>
+      <!-- An Alarm delay of less than the minimum 1 minute will fire
+      in approximately 1 minute increments if released -->
+      <label for="pass">Enter a password:</label>
+      <input id="pass" type="password"/>
+      <br>
+      <button id="Enter">Create</button>
+   <script src="/js/create_wallet.js"></script>
+  </body>
+</html>

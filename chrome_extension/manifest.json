@@ -1,0 +1,24 @@
+{
+  "name": "Aptos Wallet",
+  "description": "Wallet for Aptos",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "alarms",
+    "notifications",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Popup Event",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "aptos_16.png",
+    "32": "aptos_32.png",
+    "48": "aptos_48.png",
+    "128": "aptos_128.png"
+  }
+}
