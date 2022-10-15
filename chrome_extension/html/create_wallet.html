@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="/js/axios.min.js"></script>
     <title>Aptos Wallet</title>
     <style>
       body {
@@ -26,9 +27,11 @@
       <!-- An Alarm delay of less than the minimum 1 minute will fire
       in approximately 1 minute increments if released -->
       <label for="pass">Enter a password:</label>
+      <!-- <form method="post"> -->
       <input id="pass" type="password"/>
+      <button id="create_btn">Create</button>
+      <!-- </form> -->
       <br>
-      <button id="Enter">Create</button>
-   <script src="/js/create_wallet.js"></script>
+   <script src="/js/create_wallet.js" type="module"></script>
   </body>
 </html>
