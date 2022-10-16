@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <script src="/js/axios.min.js"></script>
     <title>Aptos Wallet</title>
     <style>
       body {
@@ -16,14 +17,53 @@
         margin: 20px;
         outline: none;
       }
+      .create_wallet {
+        display: none;
+      }
+      .load_wallet {
+        display: none;
+      }
+      .transaction {
+        display: none;
+      }
+      .transaction_private {
+        display: none;
+      }
     </style>
   </head>
   <body>
       <img src='/img/aptos_logo.png' id='aptosLogo'>
-      <!-- An Alarm delay of less than the minimum 1 minute will fire
-      in approximately 1 minute increments if released -->
-      <button id="createWallet">Create Wallet</button>
-      <button id="loadWallet">Load Wallet</button>
+      <!-- main page -->
+      <button id="createWallet" class="main">Create Wallet</button>
+      <button id="loadWallet" class="main">Load Wallet</button>
+      <!-- create wallet page -->
+      <label for="pass" class="create_wallet">Enter a password:</label>
+      <input id="pass" class="create_wallet" type="password"/>
+      <button id="create_btn" class="create_wallet">Create</button>
+      <br class="create_wallet">
+      <!-- load wallet page -->
+      <label for="private_key" class="load_wallet">Enter private key:</label>
+      <input id="load_private_key" class="load_wallet" type="password"/>
+      <br class="load_wallet">
+      <button id="load_wallet_btn" class="load_wallet">Load Wallet</button>
+      <!-- transaction page -->
+      <label class="transaction">My Address:</label>
+      <br class="transaction">
+      <label id="my_private_key" class="transaction_private"> - </label>
+      <br class="transaction_private">
+      <label id="my_address" class="transaction"> - </label>
+      <br class="transaction">
+      <label class="transaction" id="my_balance_name">My Balance:</label>
+      <br class="transaction">
+      <label id="my_balance" class="transaction"> - </label>
+      <br class="transaction">
+      <input id="target_address" class="transaction" type="text" placeholder="Enter Target Address"/>
+      <br class="transaction">
+      <input id="amount" class="transaction" type="text" placeholder="Enter Amount"/>
+      <button id="send" class="transaction">Send</button>
    <script src="/js/popup.js"></script>
+   <script src="/js/create_wallet.js" type="module"></script>
+   <script src="/js/load_wallet.js"></script>
+   <script src="/js/transaction.js"></script>
   </body>
 </html>
