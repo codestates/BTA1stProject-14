@@ -10,17 +10,21 @@ function changeClassDisplay(className, value){
 function loadCreateWallet() {
   changeClassDisplay('main', 'none');
   changeClassDisplay('create_wallet', 'block');
+  document.getElementById('pass').value = '';
 }
 
 function loadLoadWallet() {
   changeClassDisplay('main', 'none');
   changeClassDisplay('load_wallet', 'block');
+  document.getElementById('load_private_key').value = '';
 }
 
 function loadTransaction(){
   changeClassDisplay('create_wallet', 'none');
   changeClassDisplay('load_wallet', 'none');
   changeClassDisplay('transaction', 'block');
+  document.getElementById('target_address').value = '';
+  document.getElementById('amount').value = '';
 }
 
 document.getElementById('createWallet').addEventListener('click', loadCreateWallet);
