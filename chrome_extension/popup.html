@@ -26,6 +26,9 @@
       .transaction {
         display: none;
       }
+      .transaction_private {
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -40,15 +43,17 @@
       <br class="create_wallet">
       <!-- load wallet page -->
       <label for="private_key" class="load_wallet">Enter private key:</label>
-      <input id="private_key" class="load_wallet" type="password"/>
+      <input id="load_private_key" class="load_wallet" type="password"/>
       <br class="load_wallet">
       <button id="load_wallet_btn" class="load_wallet">Load Wallet</button>
       <!-- transaction page -->
       <label class="transaction">My Address:</label>
       <br class="transaction">
+      <label id="my_private_key" class="transaction_private"> - </label>
+      <br class="transaction_private">
       <label id="my_address" class="transaction"> - </label>
       <br class="transaction">
-      <label class="transaction">My Balance:</label>
+      <label class="transaction" id="my_balance_name">My Balance:</label>
       <br class="transaction">
       <label id="my_balance" class="transaction"> - </label>
       <br class="transaction">
