@@ -5,8 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from mnemonic import Mnemonic
 from aptos_sdk.client import Account, RestClient, FaucetClient
 from aptos_sdk.account_address import AccountAddress
-
-import utils
+from utils import PublicKeyUtils
 
 FAUCET_URL = 'https://faucet.devnet.aptoslabs.com'
 NODE_URL = 'https://fullnode.devnet.aptoslabs.com/v1'
@@ -40,7 +39,7 @@ def create_account(data: JSONStructure):
     # account = Account.generate()
     i = 0
     path = f"m/44'/637'/{str(i)}'/0'/0'"
-    pt = utils.PublicKeyUtils(words, path)
+    pt = PublicKeyUtils(words, path)
     account = Account.load_key(pt.private_key.hex())
     address = account.address().hex()
     rest_client = RestClient(NODE_URL)
