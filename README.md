@@ -7,7 +7,7 @@
 이 월렛 서비스를 통해 사용자는 Atos Coin을 송금하거나 account balance를 확인할 수 있습니다.
 
 <br><br>
-### Usage Guide
+## Usage Guide
 
 <br>
 1. 프로젝트를 git clone 합니다
