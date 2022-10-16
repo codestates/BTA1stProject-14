@@ -28,7 +28,7 @@ JSONStructure = Union[JSONArray, JSONObject]
 def create_account(data: JSONStructure):
     # print(password)
     print(data)
-    password = data[b'password']
+    password = data['password']
     mnemo = Mnemonic("english")
     words = mnemo.generate(strength=256)
     bob = Account.generate()
