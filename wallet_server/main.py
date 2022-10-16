@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from typing import Any, Dict, AnyStr, List, Union
 from fastapi.middleware.cors import CORSMiddleware
 from mnemonic import Mnemonic
-from aptos_sdk.client import Account
+from aptos_sdk.client import Account, RestClient, FaucetClient
 
 import utils
 
@@ -42,9 +42,13 @@ def create_account(data: JSONStructure):
     path = f"m/44'/637'/{str(i)}'/0'/0'"
     pt = utils.PublicKeyUtils(words, path)
     account = Account.load_key(pt.private_key.hex())
-
+    address = account.address().hex()
+    rest_client = RestClient(NODE_URL)
+    faucet_client = FaucetClient(FAUCET_URL, rest_client)
+    faucet_client.fund_account(address, 0)
     return {"words": words,
-            "private_key": account.private_key.hex()}
+            "private_key": account.private_key.hex(),
+            "address": address}
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
