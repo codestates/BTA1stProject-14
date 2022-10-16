@@ -50,19 +50,5 @@ def create_account(data: JSONStructure):
             "private_key": account.private_key.hex(),
             "address": address}
 
-
-@app.post("/load_wallet")
-def load_wallet(data: JSONStructure):
-    print(data)
-    private_key = data[b'private_key']
-    account = Account.load_key(private_key)
-    rest_client = RestClient(NODE_URL)
-    address = account.address().hex()
-    balance = rest_client.account_balance(address)
-    print(balance)
-    return {"address": address,
-            "balance": balance}
-
-
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
