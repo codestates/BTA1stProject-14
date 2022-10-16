@@ -7,12 +7,8 @@
     "activeTab",
     "notifications",
     "storage",
-    "identity",
-    "http://localhost/*"
+    "identity"
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
   "action": {
     "default_title": "Popup Event",
     "default_popup": "popup.html"
@@ -24,7 +20,7 @@
     "128": "aptos_128.png"
   },
   "content_security_policy": {
-    "extension_pages": "script-src http://localhost;  object-src http://localhost;"
+    "extension_pages": "script-src 'self';  object-src 'self';"
   },
   "host_permissions": ["http://localhost:8000/*"]
 }

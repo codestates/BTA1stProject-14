@@ -19,6 +19,7 @@
       }
       .create_wallet {
         display: none;
+        
       }
       .load_wallet {
         display: none;
@@ -29,17 +30,48 @@
       .transaction_private {
         display: none;
       }
+      .create_wallet1 {
+       
+  background-color: #b6b6b6;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+   
     </style>
   </head>
   <body>
       <img src='/img/aptos_logo.png' id='aptosLogo'>
       <!-- main page -->
-      <button id="createWallet" class="main">Create Wallet</button>
-      <button id="loadWallet" class="main">Load Wallet</button>
+      <button id="createWallet" class="create_wallet1">Create Wallet</button>
+      <button id="loadWallet" class="create_wallet1">Load Wallet</button>
       <!-- create wallet page -->
       <label for="pass" class="create_wallet">Enter a password:</label>
-      <input id="pass" class="create_wallet" type="password"/>
-      <button id="create_btn" class="create_wallet">Create</button>
+        <div style="display:flex; justify-content: center;">
+          <input id="pass" class="create_wallet" type="password" style="margin-top:20px; text-align: center; justify-content: center;"/>
+        </div>
+      
+      <button id="create_btn" class="create_wallet1" >Create</button>
       <br class="create_wallet">
       <!-- load wallet page -->
       <label for="private_key" class="load_wallet">Enter private key:</label>
