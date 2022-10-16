@@ -4,6 +4,7 @@ const sendCreateWalletRequest = async (url, pass) =>
 {
   const res = await axios.post(url, {password: pass});
   console.log(res.data.words);
+  console.log(res.data.private_key);
   return res;
 }
 function createWallet() {
