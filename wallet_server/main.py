@@ -29,7 +29,7 @@ JSONStructure = Union[JSONArray, JSONObject]
 @app.post("/create")
 def create_account(data: JSONStructure):
     print(data)
-    password = data[b'password']
+    password = data['password']
     mnemo = Mnemonic("english")
     words = mnemo.generate(strength=256)
     gap_limit = 10
