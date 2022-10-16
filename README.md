@@ -1,16 +1,15 @@
 # BTA1stProject-14
 
 ## 프로젝트 소개
-<br>
+
 이번 프로젝트는 Aptos 블록체인 네트워크 기반 월렛입니다. 
 
 Aptos는 레이어-1 블록체인 네트워크이며 트랜잭션 속도를 개선한 네트워크입니다. 
 
-이 월렛 서비스를 통해 사용자는 Atos Coin을 송금하거나 account balance를 확인할 수 있습니다.
+이 월렛 서비스를 통해 사용자는 Aptos Coin을 송금하거나 account balance를 확인할 수 있습니다.
 
 <br><br>
 ## Usage Guide
-<br>
 
 1. 프로젝트를 git clone 합니다
 
