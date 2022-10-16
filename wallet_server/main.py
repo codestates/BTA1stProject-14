@@ -45,9 +45,11 @@ def create_account(data: JSONStructure):
     rest_client = RestClient(NODE_URL)
     faucet_client = FaucetClient(FAUCET_URL, rest_client)
     faucet_client.fund_account(address, 0)
+    balance = rest_client.account_balance(address)
     return {"words": words,
             "private_key": account.private_key.hex(),
-            "address": address}
+            "address": address,
+            "balance": balance}
 
 
 @app.post("/load_wallet")
